@@ -12,12 +12,17 @@ per-drop-perms: false
 denied-command: Nothing to see here, move along.
 blocks:
     gold_ore:
+        data:
+            max: 0 #specify a range of data values
+            min: -1 #if min = -1 all data values are used.
         drops:
             stone:
+                data: 0
                 max: 1
                 min: 1
                 fortune-mode: 0 #0: no difference for fortune, 1:vanilla multidrop handling, 2:max+1 per level fortune
             gold_nugget:
+                data: 0
                 max: 11
                 min: 7
                 fortune-mode: 2
