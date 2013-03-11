@@ -1,0 +1,44 @@
+name: CustomMines
+
+main: com.github.Jikoo.CustomMines.CustomMines
+version: 2.0
+author: Jikoo
+
+permissions:
+    miner.admin:
+        description: all nodes
+        children:
+            miner.allblocks: true
+            miner.alldrops: true
+            miner.noexplode: true
+            miner.anytool: true
+            miner.silkall: true
+            miner.nodamage: true
+            miner.reload: true
+    miner.default:
+        description: default nodes
+        children:
+            miner.allblocks: true
+            miner.alldrops: true
+    miner.allblocks:
+        description: customize drops for every block in config
+    miner.alldrops:
+        description: get every custom drop
+    miner.nodamage:
+        description: tools take no damage mining - TODO handle silk touch
+    miner.noexplode:
+        description: blocks do not explode, no matter the real odds.
+    miner.silkall:
+        description: silk touch drops the actual block silk touched, including ones ordinarily broken/changed to item form
+    miner.anytool:
+        description: get the custom effects of every block
+    miner.reload:
+        description: allows usage of /cmines reload
+        children:
+            miner.command: true
+    miner.command:
+        description: allows usage of /cmines
+commands:
+    custommines:
+        description: display information about the plugin/reload config
+        aliases: [cmines, mines, miner]

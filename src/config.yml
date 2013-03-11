@@ -1,0 +1,31 @@
+#drop items individually - for fewer itemstacks (less lag) set false
+drop-spray: true
+
+#use permissions?
+permissions: true
+#use permission miner.allblocks or miner.<blocktype> to get customized drops for a block?
+per-block-perms: false
+#use permission miner.alldrops or miner.<blocktype>.<droptype> to recieve each custom drop?
+per-drop-perms: false
+
+#if user is denied access to /cmines, send the following message (delete for no message)
+denied-command: Nothing to see here, move along.
+blocks:
+    gold_ore:
+        drops:
+            stone:
+                max: 1
+                min: 1
+                fortune-mode: 0 #0: no difference for fortune, 1:vanilla multidrop handling, 2:max+1 per level fortune
+            gold_nugget:
+                max: 11
+                min: 7
+                fortune-mode: 2
+            exp:
+                type: 1 #0: custom, 1: vanilla
+                max: 0
+                min: 0
+        explode:
+            percent: 0 #0 to disable, 100.000 max
+            power: 0
+            toolDamage: 0
